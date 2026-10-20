@@ -16,7 +16,14 @@ This is a standard Next.js application with no database or runtime secrets.
 - Output: Next.js default
 - Preferred project name: `money-coder-website`
 
-Set `NEXT_PUBLIC_SITE_URL` to the actual production URL if Vercel assigns a different hostname. The verified production URL and deployment commit are added here after deployment.
+Verified production release:
+
+- URL: <https://money-coder-website.vercel.app>
+- Vercel deployment: `dpl_uqZKm1F2nXp2bUe12REQSDfospk7`
+- Source commit: `c801c9771b6db54dea45c268e63ddb502e6194c0`
+- Status: `READY`; public smoke test returned HTTP 200 with the expected title, Arabic headline, logo, and Next.js assets.
+
+The project is connected to the GitHub repository, with `main` as the production branch. Set `NEXT_PUBLIC_SITE_URL` only if the production hostname changes.
 
 ## Future custom domain
 
