@@ -258,3 +258,154 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+/* Desktop fidelity pass — calibrated against the approved 1024 × 1536 reference. */
+@media (min-width: 981px) {
+  html { scroll-padding-top: 50px; }
+  .container { width: min(960px, calc(100% - 44px)); }
+  .section { padding: 10px 0; }
+  .section-wave::after { inset-inline: 0; }
+
+  .site-header { height: 50px; }
+  .header-inner { gap: 16px; }
+  .logo-link { width: 154px; }
+  .brand-lockup { height: 42px; }
+  .brand-mark-frame, .brand-mark-frame img { width: 42px; height: 42px; }
+  .brand-word-frame, .brand-word-frame img { width: 111px; }
+  .desktop-nav { gap: 1px; }
+  .desktop-nav a { padding: 0 9px; font-size: 9px; }
+  .desktop-nav a.active::after { bottom: 7px; width: 24px; }
+  .header-actions { gap: 6px; }
+  .icon-button, .language-pill { width: 29px; height: 29px; font-size: 8px; }
+  .header-cta { display: inline-flex; min-height: 30px; padding-inline: 14px; border-radius: 9px; font-size: 9px; }
+
+  .hero-section { min-height: 0; height: 295px; padding: 16px 0; }
+  .hero-grid { height: 100%; grid-template-columns: 42% 58%; }
+  .eyebrow { padding: 4px 9px; margin-bottom: 8px; font-size: 7px; }
+  .hero-copy h1 { font-size: 32px; line-height: 1.24; }
+  .hero-description { margin: 9px 0 12px; font-size: 10px; line-height: 1.75; }
+  .hero-buttons { gap: 8px; }
+  .hero-buttons .button { min-width: 126px; min-height: 34px; padding-inline: 14px; font-size: 9px; border-radius: 8px; }
+  .benefit-row { gap: 14px; margin-top: 13px; font-size: 8px; }
+  .benefit-row svg { width: 13px; height: 13px; }
+  .hero-visual { height: 262px; transform: scale(.65); transform-origin: 100% 50%; margin-left: -180px; width: 700px; }
+
+  .trust-strip { border-radius: 24px 24px 0 0; }
+  .trust-inner { min-height: 75px; grid-template-columns: 1.1fr 1.45fr 1.15fr; gap: 16px; }
+  .trust-statement strong { font-size: 11px; }
+  .trust-statement span { margin-top: 2px; font-size: 7px; }
+  .sector-list { gap: 11px; font-size: 7px; }
+  .sector-list span { min-width: 42px; gap: 3px; }
+  .sector-list svg { width: 14px; height: 14px; }
+  .trust-facts { border-radius: 10px; }
+  .trust-facts div { padding: 8px 5px; }
+  .trust-facts strong { font-size: 11px; }
+  .trust-facts span { font-size: 6px; }
+
+  .section-heading { max-width: 620px; margin-bottom: 8px; }
+  .section-heading > span, .mini-label { padding: 3px 9px; font-size: 7px; }
+  .section-heading h2 { margin: 3px 0 2px; font-size: 19px; line-height: 1.22; }
+  .section-heading p { font-size: 8px; line-height: 1.5; }
+
+  .services-section { height: 252px; padding-top: 9px; }
+  .services-grid { gap: 8px; }
+  .service-card { min-height: 0; height: 184px; padding: 12px 8px 8px; border-radius: 11px; }
+  .icon-orb { width: 34px; height: 34px; }
+  .icon-orb svg { width: 19px; height: 19px; }
+  .service-card h3 { min-height: 25px; margin: 6px 0 4px; font-size: 9px; line-height: 1.35; }
+  .service-card ul { padding-right: 10px; font-size: 7px; line-height: 1.65; }
+  .service-card a { font-size: 7px; }
+  .service-card a svg { width: 10px; }
+
+  .products-section { height: 285px; padding-top: 9px; }
+  .products-grid { gap: 10px; }
+  .product-card { height: 198px; border-radius: 12px; }
+  .product-mockup { height: 84px; padding: 8px 9px 6px; }
+  .mock-sidebar { width: 25px; padding: 8px 5px; gap: 7px; }
+  .mock-main { padding: 6px; }
+  .mock-metrics { margin-top: 4px; }
+  .mock-metrics i { height: 17px; }
+  .mock-body { margin-top: 3px; }
+  .mock-chart, .mock-gauge { height: 24px; }
+  .mock-chart svg, .mock-gauge svg { width: 20px; height: 20px; }
+  .illustrative-label { bottom: 4px; right: 5px; font-size: 5px; }
+  .product-card-body { padding: 13px 9px 7px; }
+  .product-icon { top: -19px; right: 11px; width: 34px; height: 34px; border-width: 3px; }
+  .product-icon svg { width: 15px; }
+  .product-card h3 { font-size: 10px; }
+  .product-card h4 { margin: 2px 0; font-size: 7px; }
+  .product-card p { min-height: 21px; margin: 1px 0; font-size: 6px; line-height: 1.4; }
+  .tag-row { gap: 3px; margin: 3px 0; }
+  .tag-row span { padding: 2px 6px; font-size: 5.5px; }
+  .product-actions { gap: 4px; }
+  .product-actions .button { min-height: 24px; padding: 0 5px; border-radius: 6px; font-size: 6.5px; }
+  .product-actions svg { width: 10px; }
+
+  .process-section { height: 178px; padding-top: 14px; }
+  .process-grid { gap: 12px; margin-top: 13px; }
+  .process-step { min-height: 88px; padding-right: 43px; }
+  .step-number { right: 7px; font-size: 12px; }
+  .step-icon { top: 27px; width: 32px; height: 32px; }
+  .step-icon svg { width: 15px; }
+  .process-step h3 { margin: 4px 0 2px; font-size: 9px; }
+  .process-step p { font-size: 6.5px; line-height: 1.45; }
+  .step-arrow { left: -14px; top: 37px; width: 13px; }
+
+  .industries-section { height: 130px; padding-top: 7px; }
+  .industries-layout { height: 112px; gap: 12px; grid-template-columns: 1.55fr .9fr; }
+  .industries-main .section-heading { margin-bottom: 5px; }
+  .industries-grid { gap: 5px; }
+  .industries-grid { grid-template-columns: repeat(8, 1fr); }
+  .industries-grid a { min-height: 30px; border-radius: 7px; gap: 1px; font-size: 5.5px; }
+  .industries-grid svg { width: 14px; height: 14px; }
+  .consultation-card { min-height: 0; height: 112px; border-radius: 12px; }
+  .consultation-content { max-width: 74%; padding: 8px 12px; }
+  .consultation-card h2 { margin: 4px 0 2px; font-size: 13px; }
+  .consultation-card p { margin: 2px 0 4px; font-size: 6.5px; line-height: 1.35; }
+  .consultation-card .button { min-height: 23px; padding-inline: 9px; font-size: 6.5px; }
+  .consultation-card small { display: none; }
+  .consultation-art { width: 105px; }
+  .consultation-art i { width: 45px; }
+  .consultation-art i:nth-child(1) { left: 2px; height: 62px; }
+  .consultation-art i:nth-child(2) { left: 35px; height: 92px; }
+  .consultation-art i:nth-child(3) { left: 67px; height: 74px; }
+
+  .social-pricing-row { height: 225px; }
+  .social-pricing-row > .section { height: 225px; padding: 10px 0; }
+  .social-pricing-row > .section > .container { width: calc(100% - 22px); }
+  .social-pricing-row .section-heading { margin-bottom: 7px; }
+  .social-pricing-row .section-heading h2 { font-size: 17px; }
+  .social-pricing-row .section-heading p { min-height: 20px; font-size: 6.5px; }
+  .testimonials-grid { gap: 5px; }
+  .testimonial-card { min-height: 0; height: 137px; padding: 9px; border-radius: 9px; }
+  .quote-icon { width: 14px; height: 14px; }
+  .testimonial-card > p { min-height: 47px; margin: 4px 0; font-size: 6.3px; line-height: 1.5; }
+  .avatar-placeholder { width: 26px; height: 26px; }
+  .avatar-placeholder svg { width: 12px; }
+  .testimonial-meta { gap: 5px; }
+  .testimonial-meta strong { font-size: 6.5px; }
+  .testimonial-meta small { font-size: 5px; }
+  .pricing-section { padding-top: 10px; }
+  .pricing-grid { gap: 5px; }
+  .pricing-card, .pricing-card.featured { min-height: 0; height: 137px; padding: 9px 8px; border-radius: 9px; }
+  .pricing-card.featured { height: 148px; }
+  .popular-badge { top: -7px; left: 7px; padding: 3px 6px; font-size: 5px; }
+  .pricing-card h3 { font-size: 10px; }
+  .pricing-card > p { margin: 2px 0 5px; font-size: 6px; }
+  .pricing-card > strong { font-size: 11px; }
+  .pricing-card ul { margin: 4px 0; font-size: 5.8px; line-height: 1.4; }
+  .pricing-card li { gap: 3px; }
+  .pricing-card li svg { width: 9px; height: 9px; }
+  .pricing-card .button { min-height: 23px; padding-inline: 5px; font-size: 6px; }
+
+  .footer-cta > .container { min-height: 55px; }
+  .footer-cta > .container { direction: ltr; }
+  .footer-cta > .container > div,
+  .footer-cta > .container > a { direction: rtl; }
+  .footer-cta > .container > div { gap: 12px; }
+  .footer-cta .brand-lockup { height: 40px; }
+  .footer-cta h2 { margin-bottom: 1px; font-size: 14px; }
+  .footer-cta p { font-size: 7px; }
+  .footer-cta .button { min-height: 29px; padding-inline: 12px; font-size: 7px; }
+  .footer-grid, .footer-bottom { display: none; }
+}
