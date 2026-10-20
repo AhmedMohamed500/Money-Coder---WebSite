@@ -1,0 +1,12 @@
+node_modules/
+.pnpm-store/
+.next/
+out/
+.vercel/
+*.log
+*.tsbuildinfo
+.env*
+!.env.example
+playwright-report/
+test-results/
+screenshots/local-*.png
