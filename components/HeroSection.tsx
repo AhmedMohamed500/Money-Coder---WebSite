@@ -27,7 +27,7 @@ export function HeroSection() {
       </div>
       <div className="money-orbit" aria-label="منظومة Money Coder المتكاملة">
         <div className="orbit-halo halo-one" /><div className="orbit-halo halo-two" /><div className="orbit-halo halo-three" />
-        <div className="orbit-core"><span className="core-index">MC.OS</span><Image src="/money-coder-mark.png" alt="Money Coder" width={132} height={132} priority /><strong>كل عملياتك<br />في مدار واحد</strong></div>
+        <div className="orbit-core"><span className="core-index">MC.OS</span><Image src="/money-coder-mark-transparent.png" alt="Money Coder" width={132} height={132} priority /><strong>كل عملياتك<br />في مدار واحد</strong></div>
         {orbitNodes.map(({ label, className, icon: Icon }) => <div className={className} key={label}><Icon /><span>{label}</span></div>)}
         <div className="orbit-readout readout-a"><small>تدفق العمل</small><strong>متصل</strong><i /></div>
         <div className="orbit-readout readout-b"><small>الرؤية التشغيلية</small><strong>لحظية</strong><i /></div>
