@@ -1,14 +1,8 @@
-import { Quote, ShieldCheck } from "lucide-react";
-import { SectionHeading } from "./SectionHeading";
+import { ShieldCheck } from "lucide-react";
 
 export function TestimonialsSection() {
-  const cards = [
-    ["قصص نجاح موثقة", "سيتم نشر دراسة الحالة بعد اعتماد تفاصيل المشروع ونتائجه من العميل."],
-    ["آراء عملاء حقيقية", "نحافظ على هذه المساحة للمراجعات الموثقة فقط، دون أسماء أو تقييمات مختلقة."],
-    ["نتائج قابلة للقياس", "نعرض مؤشرات الأداء عندما تتوفر بيانات موثقة وموافقة صريحة على النشر."],
-  ];
-  return <section className="section testimonials-section"><div className="container">
-    <SectionHeading eyebrow="آراء عملائنا" title="شركاء نجاح حقيقيون" description="المصداقية أولاً: لا ننشر أسماء أو مراجعات أو تقييمات قبل التحقق منها." />
-    <div className="testimonials-grid">{cards.map(([title, text], index) => <article className="testimonial-card" key={title}><Quote className="quote-icon" /><p>{text}</p><div className="testimonial-meta"><span className={`avatar-placeholder avatar-${index + 1}`}><ShieldCheck /></span><div><strong>{title}</strong><small>محتوى بانتظار الاعتماد</small></div></div></article>)}</div>
+  return <section className="proof-section"><div className="container proof-layout">
+    <div className="proof-manifesto"><span>06 / PROOF</span><div className="giant-quote">“</div><h2>الثقة لا تُكتب.<br /><em>تُثبت في التشغيل.</em></h2><p>لن نملأ هذه المساحة بأسماء أو أرقام غير موثقة. تُنشر قصص النجاح فقط بعد اعتماد العميل وقياس النتيجة.</p></div>
+    <div className="proof-principles">{[["01","نتيجة قابلة للقياس"],["02","مراجعة موثقة"],["03","نشر بموافقة صريحة"]].map(([number,label]) => <div key={number}><span>{number}</span><strong>{label}</strong><ShieldCheck /></div>)}</div>
   </div></section>;
 }

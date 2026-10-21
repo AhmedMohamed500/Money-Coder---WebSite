@@ -1,12 +1,12 @@
 import { ArrowLeft } from "lucide-react";
 import { industries, siteConfig } from "@/data/site";
-import { SectionHeading } from "./SectionHeading";
 
 export function IndustriesSection() {
-  return <section className="section industries-section section-wave"><div className="container"><div className="industries-layout">
-    <div className="industries-main"><SectionHeading eyebrow="القطاعات التي نخدمها" title="حلول مخصصة لمختلف الأنشطة" description="نكيّف التقنية لتناسب طريقة عمل كل قطاع." />
-      <div className="industries-grid">{industries.map(({ title, icon: Icon, href }) => <a key={title} href={href}><Icon /><span>{title}</span></a>)}</div>
+  return <section className="industry-universe">
+    <div className="container industry-layout">
+      <div className="industry-copy"><span>05 / SECTORS</span><h2>لا نفرض النظام على نشاطك.<br /><em>نبنيه من داخله.</em></h2><p>نقرأ حركة العمل كما هي، ثم نعيد تركيبها كتدفق رقمي متماسك.</p></div>
+      <div className="industry-orbits"><div className="industry-core"><strong>نشاطك</strong><small>هو نقطة البداية</small></div>{industries.map(({ title, icon: Icon, href }, index) => <a className={`industry-node industry-node-${index + 1}`} href={href} key={title}><Icon /><span>{title}</span></a>)}</div>
     </div>
-    <aside id="contact" className="consultation-card"><div className="consultation-content"><span className="mini-label">استشارة أولية</span><h2>مش متأكد من الحل المناسب؟</h2><p>ابدأ بطلب تواصل، وسنساعدك في اختيار الحل الأنسب لطبيعة أعمالك دون التزام.</p><a className="button button-primary" href={siteConfig.inquiryUrl} target="_blank" rel="noreferrer">احجز استشارة مجانية <ArrowLeft size={16} /></a><small>يتم فتح طلب تواصل على مستودع المشروع؛ لا يتم تأكيد حجز تلقائياً.</small></div><div className="consultation-art"><i /><i /><i /></div></aside>
-  </div></div></section>;
+    <div id="contact" className="contact-tunnel"><div className="container contact-tunnel-inner"><span>READY / WHEN YOU ARE</span><h2>قل لنا أين يتعطل العمل.<br />وسنريك أين يبدأ الحل.</h2><a href={siteConfig.inquiryUrl} target="_blank" rel="noreferrer">ابدأ جلسة اكتشاف <ArrowLeft /></a></div></div>
+  </section>;
 }

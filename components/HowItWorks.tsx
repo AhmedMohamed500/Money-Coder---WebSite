@@ -1,12 +1,8 @@
-import { ArrowLeft } from "lucide-react";
 import { processSteps } from "@/data/site";
-import { SectionHeading } from "./SectionHeading";
 
 export function HowItWorks() {
-  return <section id="process" className="section process-section"><div className="container">
-    <SectionHeading eyebrow="كيف نعمل؟" title="من فكرتك إلى نظام يعمل فعلاً" description="خطوات واضحة وسهلة للوصول إلى الحل المناسب لعملك." />
-    <div className="process-grid">{processSteps.map(({ title, text, icon: Icon }, index) => <article className="process-step" key={title}>
-      <span className="step-number">0{index + 1}</span><span className="step-icon"><Icon /></span><h3>{title}</h3><p>{text}</p>{index < processSteps.length - 1 && <ArrowLeft className="step-arrow" />}
-    </article>)}</div>
+  return <section id="process" className="process-v2"><div className="container">
+    <header className="process-v2-heading"><span>04 / METHOD</span><h2>الفكرة لا تقفز إلى كود.<br /><em>تمر عبر نظام.</em></h2></header>
+    <div className="process-rail">{processSteps.map(({ title, text, icon: Icon }, index) => <article className="process-station" key={title}><span className="station-node"><Icon /></span><b>0{index + 1}</b><h3>{title}</h3><p>{text}</p></article>)}</div>
   </div></section>;
 }
